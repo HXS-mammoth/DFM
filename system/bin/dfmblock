@@ -1,0 +1,20 @@
+#!/system/bin/sh
+MOD=/data/adb/modules/dfm_block_pro_ace6
+case "$1" in
+    log)   tail -30 $MOD/log.txt 2>/dev/null || echo "无日志" ;;
+    status) 
+        if pgrep -f "dfm_block_pro\|service.sh" >/dev/null 2>&1; then
+            echo "运行中"
+        else
+            echo "未运行"
+        fi
+        ;;
+    clean)
+        su -c "sh $MOD/service.sh" &
+        echo "已触发清理循环"
+        ;;
+    *)
+        echo "DFM Block Pro"
+        echo "用法: dfmblock [log|status|clean]"
+        ;;
+esac
