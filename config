@@ -1,1 +1,11 @@
 这里什么都没有
+日志路径：/data/adb/modules/dfm_block_pro_ace6/log.txt
+工作原理简述
+文件清理：定时扫描游戏数据目录，删除匹配关键词的文件（AntiCheat、coord、encrypt、applist、report 等）
+hosts 阻断：通过模块挂载自定义 hosts，将部分反作弊/遥测域名指向 127.0.0.1
+目录锁定：游戏运行期间将部分目录设为只读，降低恶意文件落地概率
+注意事项
+本模块仅在 com.tencent.tmgp.dfm 相关目录操作，不会影响其他应用
+如果游戏更新后出现无法进入对局或严重网络异常，请先禁用模块测试
+建议配合 Hide My Applist 使用，从源头减少应用列表被读取
+hosts 列表可根据实际网络情况自行增删（路径：system/etc/hosts）
