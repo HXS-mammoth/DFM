@@ -1,0 +1,30 @@
+# DFM Block Pro - 腾讯游戏反作弊/遥测相关域名阻断
+# 仅影响本模块挂载，不影响系统其他功能
+127.0.0.1 localhost
+::1 localhost
+
+# 游戏安全 / ACE 相关
+127.0.0.1 gamesafe.qq.com
+127.0.0.1 gamesafe.qq.com.cn
+127.0.0.1 ace.qq.com
+127.0.0.1 ac.qq.com
+127.0.0.1 tprt.qq.com
+127.0.0.1 tp2.qq.com
+
+# 常见遥测 / 上报
+127.0.0.1 oth.str.beacon.qq.com
+127.0.0.1 h.trace.qq.com
+127.0.0.1 btrace.qq.com
+127.0.0.1 android.rqd.qq.com
+127.0.0.1 rqd.qq.com
+127.0.0.1 log.tbs.qq.com
+127.0.0.1 mlog.aegis.qq.com
+127.0.0.1 sngapm.qq.com
+127.0.0.1 astat.bugly.qq.com
+127.0.0.1 android.bugly.qq.com
+127.0.0.1 ios.bugly.qq.com
+
+# 设备/应用列表相关可能上报域名（通用腾讯）
+127.0.0.1 report.qq.com
+127.0.0.1 data.game.qq.com
+127.0.0.1 cstat.qq.com
